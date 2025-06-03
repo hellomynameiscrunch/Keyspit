@@ -1,0 +1,66 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Spit-hubkey</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: url('https://i.ibb.co/ZYW3VTp/space-background.jpg') no-repeat center center fixed;
+      background-size: cover;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      background-color: rgba(255, 255, 255, 0.9);
+      border-radius: 15px;
+      max-width: 500px;
+      margin: 100px auto;
+      padding: 20px 30px;
+      text-align: center;
+      box-shadow: 0 0 20px #0ff;
+    }
+    h1 {
+      color: #000;
+      font-size: 36px;
+    }
+    h2 {
+      color: #000;
+      font-size: 24px;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      margin-top: 10px;
+      border: none;
+      border-radius: 8px;
+      background-color: #00bcd4;
+      color: white;
+      cursor: pointer;
+    }
+    .key-text {
+      margin-top: 20px;
+      font-family: monospace;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Spit-hubkey</h1>
+    <h2>Spit hub script</h2>
+    <button onclick="copyKey()">Copy</button>
+    <div class="key-text" id="keyText">loadstring(game:HttpGet("https://pastebin.com/raw/ScXiqPDM"))()</div>
+  </div>
+  <script>
+    function copyKey() {
+      const key = document.getElementById("keyText").innerText;
+      navigator.clipboard.writeText(key).then(() => {
+        alert("Script copied to clipboard!");
+      });
+    }
+  </script>
+</body>
+</html>
